@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Animais com Modal</title>
+    <!-- Bootstrap CSS local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Lista de Animais</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Espécie</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Leão</td>
+                <td>Mamífero</td>
+                <td><button class="btn btn-primary btn-sm" onclick="verDetalhes('Leão', 'Mamífero', 'O leão é um grande felino encontrado na África.')">Ver</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Papagaio</td>
+                <td>Ave</td>
+                <td><button class="btn btn-primary btn-sm" onclick="verDetalhes('Papagaio', 'Ave', 'O papagaio é uma ave conhecida por sua capacidade de imitar sons.')">Ver</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Cobra</td>
+                <td>Réptil</td>
+                <td><button class="btn btn-primary btn-sm" onclick="verDetalhes('Cobra', 'Réptil', 'As cobras são répteis de corpo alongado e sem membros.')">Ver</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="animalModal" tabindex="-1" role="dialog" aria-labelledby="animalModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="animalModalLabel">Detalhes do Animal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Nome:</strong> <span id="animalNome"></span></p>
+                <p><strong>Espécie:</strong> <span id="animalEspecie"></span></p>
+                <p><strong>Descrição:</strong> <span id="animalDescricao"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS e dependências (local) -->
+<script src="js/jquery.js"></script>
+<script src="css/bootstrap.bundle.min.js"></script>
+
+<script>
+    function verDetalhes(nome, especie, descricao) {
+        // Define os dados no modal
+        document.getElementById('animalNome').innerText = nome;
+        document.getElementById('animalEspecie').innerText = especie;
+        document.getElementById('animalDescricao').innerText = descricao;
+        
+        // Exibe o modal
+        $('#animalModal').modal('show');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Incial</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .caption-card{
+            max-width: 75%;
+            margin: 0 auto;
+            opacity: 0.85;
+            backdrop-filter: blur(3px);
+        }
+    </style>
+   
+   
+</head>
+        <body>
+            <header class="bg-primary text-white text-center py-4">
+                <h1>Universo dos Animes</h1>
+            </header>
+        
+          
+        
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span> Menu
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#atuais">Animes Atuais</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownAnimes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Todos os Animes
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownAnimes">
+                                <a class="dropdown-item" href="#">Yugioh!</a>
+                                <a class="dropdown-item" href="#">Jojo's Bizarre Adventures</a>
+                                <a class="dropdown-item" href="#">Medabots</a>
+                                <a class="dropdown-item" href="#">Naruto</a>
+                                <a class="dropdown-item" href="#">Shurato</a>
+
+
+                            </div>
+
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dragon Ball Super</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/jujutsu.html">Jujutsu Kaisen</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#poderes">Games</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container mt-4">
+                <div id="animeCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#animeCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#animeCarousel" data-slide-to="1"></li>
+                        <li data-target="#animeCarousel" data-slide-to="2"></li>
+                        <li data-target="#animeCarousel" data-slide-to="3"></li>
+                        <li data-target="#animeCarousel" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/CDaima.png" class="d-block w-100" alt="Dragonball Daima">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="caption-card bg-white text-black p-3 rounded" style="opacity: 0.75;">
+                                    <h5>Dragonball Daima</h5>
+                                    <p>Ultima historia criada por Akira Toryama</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/CDandadan.png" class="d-block w-100" alt="Dandadan">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="caption-card bg-white text-black p-3 rounded" style="opacity: 0.75;">
+                                <h5>Dandadan</h5>
+                                <p>Dois adolescente lutam contram forças sobrenaturais</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/CRezero.png" class="d-block w-100" alt="Re:zero">
+                            <div  class="carousel-caption d-none d-md-block">
+                                <div class="caption-card bg-white text-black p-3 rounded" style="opacity: 0.75;">
+                                <h5>Re:zero</h5>
+                                <p>Subaru desafia a morte todo dia</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/CBluelock.png" class="d-block w-100" alt="Bluelock">
+                            <div  class="carousel-caption d-none d-md-block">
+                                <div class="caption-card bg-white text-black p-3 rounded" style="opacity: 0.75;">
+                                <h5>Blue Lock</h5>
+                                <p>Anime de Futebol</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="images/CShangrila.png" class="d-block w-100" alt="Shangri-la Frontiers">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="caption-card bg-white text-black p-3 rounded" style="opacity: 0.75;">
+                                <h5>Shangri-la Frontiers</h5>
+                                <p>Isekai sem morte</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#animeCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#animeCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only"></span>
+                    </a>
+                </div>
+            </div>
+        
+        <div class="container">
+            <section class="container my-5"  id="atuais">
+                <h2 class="text-center">Animes Atuais</h2>
+                <p class="text-center">Fique por dentro dos novos animes da temporada, esses são os animes em alta:</p>
+                 
+                <div class="row">
+                    
+                    <div class="col-md-3 col-sm-6 text-center mb-4">
+                        <div class="card">
+                            <img  src="images/dandadan.jpeg" class="card-img-top" alt="Dandadan">
+                             <div class="card-body">
+                                <h5 class="card-title">Dandadan</h5>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 text-center mb-4">
+                        <div class="card">
+                            <img src="images/kaiju.jpg" class="card-img-top" alt="Kaiju no 8">
+                             <div class="card-body">
+                                <h5 class="card-title">Dandadan</h5>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 text-center mb-4">
+                        <div class="card">
+                            <img src="images/oshinoko.jpg" class="card-img-top" alt="Oshi no Ko">
+                             <div class="card-body">
+                                <h5 class="card-title">Oshi no Ko</h5>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 text-center mb-4">
+                        <div class="card">
+                            <img src="images/tenseishitara.png" class="card-img-top" alt="Tensei Shitara">
+                             <div class="card-body">
+                                <h5 class="card-title">Tensei Shitara</h5>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            </div>
+            <footer class="bg-dark text-white text-center py-4 mt-5">
+                <div class="container">
+                    <p>&copy; 2024 Universo dos animes - IEMA Turma 101. Todos os direitos reservados.</p>
+                    <div>
+                        <a href="facebook.com" target="_blank" class="text-white mx-2">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="facebook.com" target="_blank" class="text-white mx-2">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="facebook.com" target="_blank" class="text-white mx-2">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="facebook.com" target="_blank" class="text-white mx-2">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+
+                    </div>
+                    
+                </div>
+
+            </footer>
+           
+
+
+
+
+
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" crossorigin="anonymous""></script>
+            <script src="js/jquery.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+        </body>
+        </html>

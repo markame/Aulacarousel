@@ -1,0 +1,119 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #F8F8FF;
+    color: #333;
+    margin: 0;
+    margin: 0;
+}
+header{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+nav a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav{
+    background-color: #555;
+    text-align: center;
+    
+    padding: 10px 0;
+ 
+}
+nav a:hover{
+    background-color: #333;
+    color: #F8F8FF;
+    transition: backgroung-color 0.3s ease;
+}
+h2{
+    color: #d35400;
+    font-size: 24px;
+}
+p{
+    line-height: 1.6;
+}
+img{
+    width: 200px;
+    height: 260px;
+    margin: 20px;
+    display: block;
+
+}
+section{
+    margin: 20px;
+}
+#sobre p,
+#personagem p{
+    text-align: center;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th,td{
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th{
+    background-color: #d35400;
+    color: white;
+}
+td{
+    background-color: #fdfdfd;
+}
+.trocacor{
+    background-color: #f8c471;
+    padding: 15px;
+    border-radius: 5px;
+}
+.trocacor p{
+    margin: 0;
+}
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0 ;
+    margin-top: 20px;
+}
+footer p {
+    margin: 0;;
+}
+.tamanho{
+    font-size: small;
+}
+
+.anime-list{
+   list-style-type: none;
+   padding:0 ; 
+   margin: 0;
+   display: flex;
+   gap:20px;
+}
+.anime-list li{
+    text-align: center;
+}
+
+.anime-list img{
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+ /* Centraliza a seção de animes na tela */
+ section#atuais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa toda a altura da página */
+}
+.anime-list img:hover{
+    transform: scale(1.1);
+}

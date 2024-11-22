@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+        }
+        div{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form onsubmit="calculaMedia();return false;" >
+        <h3>Calcule sua média</h3>
+        <input placeholder="Digite a primeira nota" id="nota1">
+        <input placeholder="Digite a segunda nota" id="nota2">
+        <input placeholder="Digite a terceira nota" id="nota3"><br>
+        <button type="submit">Clique Aqui</button>
+     <div id="media"></div>
+    </form>
+  <div>
+    <form onsubmit="saqueBancario(); return false;">
+        <h3>Realize seu saque</h3>
+        <label  id="saldo"></label><br>
+        <input placeholder="Digite o valor para sacar" id="valor"><br>
+        <button type="submit">Sacar</button>   
+    </form>
+    <form onsubmit="depositoBancario(); return false;">
+        <h3>Realize seu Deposito</h3>
+        <label  id="saldodeposito"></label><br>
+        <input placeholder="Digite o valor para depositar" id="valordeposito"><br>
+        <button type="submit">Depósitar</button> 
+    </form>
+  </div>
+
+    <script>
+        function calculaMedia(){
+            let = nota1,nota2,nota3, media;
+            nota1 = parseInt(document.getElementById("nota1").value);
+            nota2 = parseInt(document.getElementById("nota2").value);
+            nota3 = parseInt(document.getElementById("nota3").value);
+            media = ((nota1+nota2+nota3)/3);
+            if(media >= 7){
+                document.getElementById("media").innerText=`O aluno foi aprovado com nota ${media}`;
+
+            }else{
+                document.getElementById("media").innerText=`O aluno foi reprovado com nota ${media}`;
+            }
+        }
+        let saldo = 5000.00;
+            document.getElementById("saldo").innerText=`Seu saldo atual é: R$ ${saldo}`;
+            document.getElementById("saldodeposito").innerText=`Seu saldo atual é: R$ ${saldo}`;
+
+        function saqueBancario(){
+            let valor = document.getElementById("valor").value;
+            
+            if(valor > saldo){
+                document.getElementById("saldo").innerText=`Seu saldo atual é: R$ ${saldo} e você nao pode sacar mais que isso`;
+            }else{
+                saldo = saldo - valor;
+                document.getElementById("saldo").innerText=`Seu saldo atual é: R$ ${saldo}`; 
+                document.getElementById("saldodeposito").innerText=`Seu saldo atual é: R$ ${saldo}`;
+            }
+            
+        }
+        function depositoBancario(){
+            let entradaValida = false;
+            let deposito;
+            while(!entradaValida){
+                deposito = parseInt( document.getElementById("valordeposito").value);
+            if(isNaN(deposito)||deposito <=0){
+                alert("Depósito inválido. Insira um valor maior que zero.");
+                return;
+            }else{
+               entradaValida  = true;
+            }
+         }
+         saldo = saldo+deposito;
+               document.getElementById("saldodeposito").innerText=`O deposito de ${deposito} foi feito com sucesso: seu saldo atual é R$ ${saldo}`;  
+               document.getElementById("saldo").innerText=`Seu saldo atual é: R$ ${saldo}`;   
+        }
+        
+                                                               
+        
+    </script>
+    <script>
+        var nome = ['Marcos','José','Caio','Heitor','Ana Clara','Rainara'];
+         let numeros = [1,2,3,4,5,6,7];
+         let index = 0;
+         let i = 0;
+
+         for( let i = 0; i < numeros.length; i++){
+            console.log("O valor do array é: "+numeros[i]);
+
+         }
+        
+         while (index > nome.length){
+            console.log("Esse vetor foi percorrido com while "+nome[index]);
+           
+            index++;
+         }
+
+        do {
+            console.log("Esse vetor foi percorrido com do while "+nome[i]);
+            i++;
+        }while(i > nome.length);
+
+          function alteraTexto(texto){
+            let Ftext = texto;
+            const elemento = document.getElementById("textoAlt");
+            elemento.innerHTML = Ftext;
+
+          } 
+        
+    </script>
+    <div id = "textoAlt"> Esse é meu texto incial</div>
+    <button onclick="alteraTexto('Bom dia, você esta assistindo a aula online de programação pra WEB')">Clique aqui para mudar o texto</button>
+</body>
+</html>
